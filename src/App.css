@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500&family=Merriweather:wght@300&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display&family=Public+Sans:wght@100&family=Roboto+Mono:wght@100;400&display=swap');
 .app {
-  background: #000000;
+  background: #18181d;
   height: 100vh;
   padding: 30px;
+  font-family: 'Merriweather', serif;
 }
-h1{
+
+h1 {
   font-size: 30px;
   text-align: center;
   color: #ffffff;
@@ -11,55 +14,65 @@ h1{
 
 .todo-list {
   align-content: center;
-  background: #fffdfd;
-  border-radius: 4px;
+  background: #272626;
+  border-radius: 50px;
   max-width: 400px;
   padding: 40px;
   margin: 0 auto;
- 
 }
 
-.todo{
+.todo {
   align-items: center;
-  background: #4ce9dc;
+  height: 5vh;
+  background: #171818;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   display: flex;
-  font-size: 20px;
-  font-weight:500;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-weight: 500;
   justify-content: space-between;
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 5px 10px;
+  word-break: break-word; 
 }
+.todo button i.far.fa-check-circle {
+  font-size: 40px;
+  color: #333333;
+}
+
+.todo button i.far.fa-check-circle:hover {
+  color: #7d9cc0;
+}
+
 .form {
   margin-bottom: 20px;
   border-radius: 10%;
   padding: 3px 10px;
- 
 }
+
 .input {
-  border: none; 
+  border: none;
   border-radius: 10px;
-  height:12px;
-  outline: 1px solid #413d3d; 
+  height: 12px;
+  outline: 1px solid #413d3d;
   background: transparent;
-  color: #000000;
-  font-size: 20px;
+  color: #dadada;
+  font-size: 15px;
   padding: 10px;
   width: 95%;
 }
+
 .input::placeholder {
-  color: #000000;
+  color: #a7a6a6;
+  font-size: 17px;
 }
+
 body {
-  overflow-y: hidden; 
-  overflow-x: hidden; 
+  overflow-y: hidden;
+  overflow-x: hidden;
+  color: #dadada;
+  
 }
-
-
-
-
-
 
 

@@ -17,7 +17,7 @@ function Todo({ todo, index, completeTodo }) {
 function TodoForm({ addTodo }) {
   const [value, setValue] = React.useState("");
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!value) return;
     addTodo(value);
@@ -31,24 +31,25 @@ function TodoForm({ addTodo }) {
         className="input"
         placeholder="Enter a task.."
         value={value}
-        onChange={e => setValue(e.target.value)}
-       
+        onChange={(e) => setValue(e.target.value)}
       />
     </form>
   );
 }
 
 function App() {
-  const [todos, setTodos] = React.useState([
-  
-  ]);
+  const [todos, setTodos] = React.useState([]);
 
-  const addTodo = text => {
+  const addTodo = (text) => {
+    if (todos.length >= 10) {
+      return;
+    }
+
     const newTodos = [...todos, { text, isCompleted: false }];
     setTodos(newTodos);
   };
 
-  const completeTodo = index => {
+  const completeTodo = (index) => {
     const newTodos = [...todos];
     newTodos[index].isCompleted = !newTodos[index].isCompleted;
     setTodos(newTodos);
@@ -56,7 +57,7 @@ function App() {
 
   return (
     <div className="app">
-        <h1>To-do App</h1>
+      <h1>To-do App</h1>
       <div className="todo-list">
         {todos.map((todo, index) => (
           <Todo
@@ -71,5 +72,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
