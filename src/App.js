@@ -1,5 +1,9 @@
 import React from "react";
 import "./App.css";
+import "./animate.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+
 
 function Todo({ todo, index, completeTodo }) {
   return (
@@ -16,7 +20,6 @@ function Todo({ todo, index, completeTodo }) {
 
 function TodoForm({ addTodo }) {
   const [value, setValue] = React.useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value) return;
@@ -29,7 +32,7 @@ function TodoForm({ addTodo }) {
       <input
         type="text"
         className="input"
-        placeholder="Enter a task.."
+        placeholder="Add a task.."
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
@@ -41,7 +44,7 @@ function App() {
   const [todos, setTodos] = React.useState([]);
 
   const addTodo = (text) => {
-    if (todos.length >= 10) {
+    if (todos.length >= 6) {
       return;
     }
 
@@ -56,8 +59,10 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <h1>To-do App</h1>
+    <div>
+   <div className="app">
+    <div id="stars"></div>
+          <h1>To-Do App</h1>
       <div className="todo-list">
         {todos.map((todo, index) => (
           <Todo
@@ -69,6 +74,7 @@ function App() {
         ))}
         <TodoForm addTodo={addTodo} />
       </div>
+    </div>
     </div>
   );
 }
