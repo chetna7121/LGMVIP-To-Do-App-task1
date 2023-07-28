@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/LGMVIP-To-Do-App-task1/static/css/main.73b676ff.css",
+    "main.js": "/LGMVIP-To-Do-App-task1/static/js/main.5e28f9a6.js",
+    "static/js/787.5e141d9e.chunk.js": "/LGMVIP-To-Do-App-task1/static/js/787.5e141d9e.chunk.js",
+    "index.html": "/LGMVIP-To-Do-App-task1/index.html",
+    "main.73b676ff.css.map": "/LGMVIP-To-Do-App-task1/static/css/main.73b676ff.css.map",
+    "main.5e28f9a6.js.map": "/LGMVIP-To-Do-App-task1/static/js/main.5e28f9a6.js.map",
+    "787.5e141d9e.chunk.js.map": "/LGMVIP-To-Do-App-task1/static/js/787.5e141d9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73b676ff.css",
+    "static/js/main.5e28f9a6.js"
+  ]
+}
